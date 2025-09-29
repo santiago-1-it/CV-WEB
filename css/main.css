@@ -1,12 +1,54 @@
-:root {
+:root{
   --theme-color: rgb(255, 255, 255);
-  --primary-color: #124f88;
+  --primary-color: #122888;
   --secondary-color: #f7c331;
   --text-color-inverse: white;
   --text-color: black;
-  --navbar-shallow-color: #e5e5e5;
   --menu-mobile-background-color: #3a4460;
+
+  --accent-color: var(--primary-color);
+  --primary-color-inverse: black;
+
+  --navbar-shadow: 0 4px 5px #e5e5e5;
+  --tag-shadow:0 4px 10px rgba(0, 0, 0, 0.25);
+  --transiton: 0.2s ease-in-out;
+   color-scheme: light;
+
 }
+
+/*@media (prefers-color-scheme: dark){*/
+  :root[data-theme="dark"] {
+    --theme-color: rgb(24, 23, 23);
+    --primary-color: #295ce7;
+    --secondary-color: #f7eccd;
+    --text-color-inverse: var(--text-color);
+    --text-color: rgba(247, 237, 237, 0.644);
+    --navbar-shallow-color: #908fcf;
+    --menu-mobile-background-color: #222d49;
+  
+
+    --accent-color: var(--primary-color);
+    --navbar-shadow: 0 1px 5px #696262;
+    --tag-shadow:0 0 0 1px rgba(218, 214, 214, 0.836);
+     color-scheme: dark;
+
+  }
+/*}*/
+
+
+form {
+  color-scheme: light;
+}
+
+*{
+  transition: background-color var(--transiton), box-shadow var(--transiton);
+}
+
+svg{
+  transition: color var(--transiton);
+}
+
+
 
 html {
   scroll-behavior: smooth;
